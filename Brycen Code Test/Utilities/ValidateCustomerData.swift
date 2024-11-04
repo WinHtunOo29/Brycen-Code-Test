@@ -9,7 +9,7 @@ import Foundation
 
 class ValidateCustomerData {
     static func isValidPhoneNumber(phone: String) -> Bool {
-        let phoneRegex = "^[09][0-9]{7,9}$"
+        let phoneRegex = "^[09][0-9]{7,10}$"
         let phoneTest = NSPredicate(format: "SELF MATCHES %@", phoneRegex)
         return phoneTest.evaluate(with: phone)
     }
